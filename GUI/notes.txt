@@ -1,0 +1,4 @@
+Lable Widgets
+To add a label to our previous example,
+we will create a label using the label class like this:
+-> lbl = Label(window, text="Hello")
