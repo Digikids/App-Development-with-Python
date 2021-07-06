@@ -23,7 +23,7 @@ def add():
     txt3.delete(0, END)
     num1 = txt1.get()
     num2 = txt2.get()
-    ans = int(num1) + int(num2)
+    ans = num1 +num2
     txt3.insert(0, ans)
 
 def subtract():
