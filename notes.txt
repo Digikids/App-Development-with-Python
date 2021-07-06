@@ -1,0 +1,26 @@
+Lable Widgets
+To add a label to our previous example,
+we will create a label using the label class like this:
+-> lbl = Label(window, text="Hello")
+
+HANDLE THE BUTTON CLICK EVENT
+First we write the function that we need to execute when the button is clicked
+Then we will wire it the button by specifing the finction inside the button
+
+GET INPUT USING ENTRY CLASS
+We can create a textbox using Tkinter Entry like this:
+    txt = Entry(windo, width=10)
+
+SET FOCUS TO THE ENTRY WIDGETS 
+All we need to do is to use the .focus() keyword
+
+#CREATE A SIMPLECALCULATOR2
+1. The title of the calculator will be your name
+2. The background color should be green
+3. The size of the app should be 400 by 300
+4. For each button indicate a symbol eg addition -> +
+5. Change the location of the buttons following this procedure
+    add was c=0,r=0 -> c=0,r=4
+    subtraction was c=0,r=4 -> c=0,r=3
+    Multiplication was c=1,r=3 -> c=1,r=4
+    division was c=1,r=4 -> c=1,r=3

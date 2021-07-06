@@ -1,0 +1,281 @@
+PYTHON SYNTAX
+>>> print("Hello World")
+Python can be used to solve simple and even complex mathematical operations
+Example
+>>>5 + 5 
+10
+COMMENTS
+a programmer-readable explanation or annotation in the source code of a computer program.
+
+VARIABLES
+Variables are containers for storing data values
+a = 2
+x = 5
+>>> a + x
+
+y = "Ethan"
+print(y)
+
+k = 5
+print(k)
+
+Strings
+If you want to use text in Python, you have to use a string.
+A string is created by entering text between two single or double quotation marks.
+print("Hello world")
+y = "Ethan"
+y = 'Ethan'
+print('hello world')
+ IF STATEMENTS
+If statements are logical blocks used within programming. 
+They're conditional statements that tell a computer what to do with certain information. 
+So, if statements essentially mean: 'If something is true, then do something, otherwise do something else.
+
+i = 10
+if i = 9:
+	print("i is 9")
+else:
+	print("i is not 9")
+
+FOR LOOP
+A loop is a used for iterating over a set of statements repeatedly. 
+In Python we have three types of loops for, while and do-while. 
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+  print(x)
+
+
+While loop
+While loop is used to iterate over a block of code repeatedly until a given condition returns false. 
+The main difference is that we use while loop when we are not certain of the number of times the loop requires execution, 
+on the other hand when we exactly know how many times we need to run the loop, 
+we use for loop.
+
+DATA TYPES IN PYTHON
+text type > Strings
+Numeric Types >int, float, complex
+Sequence Types >list, tuple, range
+Mapping type > dict
+Boolean Type > bool
+
+INTEGER
+Int, or integer, is a whole number, positive or negative, without decimals, of unlimited length.
+
+FLOAT
+Float, or "floating point number" is a number, positive or negative, containing one or more decimals.
+
+LIST
+A list is a data structure in Python that is a mutable, or changeable, ordered sequence of elements
+
+TUPLE
+A list is a data structure in Python that is an immutable or an unchangeable, ordered sequence of elements
+
+BUILDING OUR FIRST PYTHON GUI APPLICATION WITH TKINTER
+
+With your Python shell open, the first thing you need to do is import the Python GUI Tkinter module
+>>> import tkinter as tk
+A window is an instance of Tkinter's TK class. 
+>>> window = tk.Tk()
+Add a widget
+Use the tk.Label class to add some text to a window.
+>>> x = tk.Label(text="Hello, Johnson")
+>>> x.pack()
+>>> window.mainloop()
+
+ADDING WIDGETS
+widgets are the elements through which users interact with your program. 
+Label	A widget used to display text on the screen
+Button	A button that can contain text and can perform an action when clicked
+Entry	A text entry widget that allows only a single line of text
+Text	A text entry widget that allows multiline text entry
+Frame	A rectangular region used to group related widgets or provide padding between widgets
+
+1.LABEL WIDGET
+Label widgets are used to display text or images. To create a Label widget, instantiate the Label class and pass a string to the text parameter.
+You can control Label text and background colors using the foreground and background parameters:
+Example
+label = tk.Label(
+    text="Hello, Tkinter",
+    foreground="white",  # Set the text color to white
+    background="black"  # Set the background color to black
+)
+
+label = tk.Label(text="Hello, Tkinter", fg="white", bg="black")
+
+You can also control the width and height of a label with the width and height parameters:
+label = tk.Label(b
+    text="Hello, Tkinter",
+    fg="white",
+    bg="black",
+    width=10,
+    height=10
+)
+ 
+2. BUTTON WIDGETS
+Button widgets are used to display clickable buttons.
+button = tk.Button(
+    text="Click me!",
+    width=25,
+    height=5,
+    bg="blue",
+    fg="yellow",
+)
+3. ENTRY WIDGETS
+When you need to get a little bit of text from a user, like a name or an email address, use an Entry widget.
+entry = tk.Entry(fg="yellow", bg="blue", width=50)
+There are three main operations you can perform with entry widgets:
+Retrieving text with .get()
+Deleting text with .delete()
+Inserting text with .insert()
+You can use .get() to retrieve the text and assign it to any variable. We use a variable with name ivan
+ivan = entry.get()
+print(ivan)
+ The .delete() takes an interger argument that tells Python which character to remove
+>>>entry.delete(0, tk.END)
+The .insert(), inserts text into an entry widget
+>>>entry.insert(0, "Python")
+
+4. TEXT WIDGETS
+Text widgets are used for entering text, just like Entry widgets. The difference is that Text widgets may contain multiple lines of text.
+>>>text_box = tk.Text()
+
+5. FRAME WIDGETS
+Frame widgets are important for organizing the layout of your widgets in an application.
+frame = tk.Frame()
+frame.pack()
+
+6 THE SPINBOX WIDGET
+The Spinbox widget is a variant of the standard Tkinter Entry widget, which can be used to select from a fixed number of values.
+import tkinter as tk
+
+master = Tk()
+
+w = Spinbox(master, from_=0, to=10)
+w.pack()
+
+mainloop()
+
+QUESTION 
+create an apllication with the following attributes
+Label  > text=Happy birthday Caroline, fg=red, bg= yellow, width=40, height=10
+Button > text=Click me, fg=blue, bg=green, width=40, height=10
+Entry>fg=yellow, bg=Navy Blue, width=50
+
+ASSIGNING WIDGETS TO FRAMES
+import tkinter as tk
+
+window = tk.Tk()
+frame = tk.Frame()
+frame.pack()
+
+window.mainloop()
+The frame.pack() packs the frame into the window so that the window sizes itself as small as possible to encompass the frame. 
+
+import tkinter as tk
+
+window = tk.Tk()
+
+frame_a = tk.Frame()
+frame_b = tk.Frame()
+
+label_a = tk.Label(master=frame_a, text="I'm in Frame A")
+label_a.pack()
+
+label_b = tk.Label(master=frame_b, text="I'm in Frame B")
+label_b.pack()
+
+frame_a.pack()
+frame_b.pack()
+
+window.mainloop()
+
+DICTIONARY(dict)
+Dictionaries are used to store data values in key:value pairs.
+A dictionary is a collection which is unordered, changeable and does not contain duplicates.
+Dictionaries are written with curly brackets, and have keys and values
+Example;
+thisdict = {
+  "Jeremy": 10,
+  "Swedo": 11,
+  "Aiyanna": 9
+}
+print(thisdict)
+
+ADJUSTING FRAME APPEARANCE WITH RELIEFS
+Relief attributes creates a boarder aroung the frame
+We can set releif to be any of the following values
+tk.FLAT: Has no border effect (the default value).
+tk.SUNKEN: Creates a sunken effect.
+tk.RAISED: Creates a raised effect.
+tk.GROOVE: Creates a grooved border effect.
+tk.RIDGE: Creates a ridged effect.
+
+for relief_name, relief in border_effects.items():
+    frame = tk.Frame(master=window, relief=relief, borderwidth=5)
+    frame.pack(side=tk.LEFT)
+    label = tk.Label(master=frame, text=relief_name)
+
+PYTHON FUNCTIONS
+A function is a block of code which only runs when it is called.
+You can pass data, known as parameters, into a function.
+A function can return data as a result.
+Functions in python are defined using the block keyword "def", followed with the function's name as the block's name.
+EXAMPLE
+def my_function():
+  print("Hello from a function")
+
+To call a function, use the function name followed by parenthesis:
+my_function()
+
+def my_function(yname):
+	print("Hello" + yname)
+
+my_function("Adley")
+Concatenation means joining strings together end-to-end to create a new string. 
+To concatenate strings, we use the + operator. 
+
+def add_two_numbers(a, b):
+	add = a + b
+	print(add)
+
+add_two_numbers(9, 10)
+
+def my_click():
+  my_label = tk.Label(master=window, text="My name is ")
+  my_label.pack()
+
+my_button = tk.Button(master=window, text="Click me",fg="blue", bg="red", command=my_click)
+my_button.pack()
+
+The .grid() Geometry Manager
+.grid() works by splitting a window or Frame into rows and columns.
+You specify the location of a widget by calling .grid() and passing the row and column indices to the row and column keyword arguments, respectively.
+Both row and column indices start at 0, so a row index of 1 and a column index of 2 tells .grid() to place a widget in the third column of the second row.
+
+import tkinter as tk
+
+window = tk.Tk()
+
+for i in range(3):
+    for j in range(3):
+        frame = tk.Frame(
+            master=window,
+            relief=tk.RAISED,
+            borderwidth=1
+        )
+        frame.grid(row=i, column=j, padx=5, pady=5)
+        label = tk.Label(master=frame, text=f"Row {i}\nColumn {j}")
+        label.pack()
+
+window.mainloop()
+
+
+
+
+
+
+
+
+
+
+
