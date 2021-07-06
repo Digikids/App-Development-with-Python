@@ -1,4 +1,8 @@
+import tkinter.messagebox
+from tkinter.ttk import *
 from tkinter import *
+from tkinter import messagebox
+
 window = Tk()
 window.title("Simple Calculator")
 window.configure(bg="Orange")
@@ -19,12 +23,18 @@ lbl3.grid(column=0, row=2)
 txt3 = Entry(window, width=10,borderwidth=5, bg ="white", fg = "black")
 txt3.grid(column=1, row=2)
 
-def add():
-    txt3.delete(0, END)
-    num1 = txt1.get()
-    num2 = txt2.get()
-    ans = num1 +num2
-    txt3.insert(0, ans)
+def add(): 
+    try:
+        txt3.delete(0, END)
+        num1 = txt1.get()
+        num2 = txt2.get()
+        if num1 or num2 != "":
+            ans = int(num1) + int(num2)
+            txt3.insert(0, ans)
+        else:
+            messagebox.showerror("Invalid Input", "Please type in a number")
+    except ValueError:
+        messagebox.showerror("Invalid Input", "Input can only be a number")
 
 def subtract():
     txt3.delete(0, END)
