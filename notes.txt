@@ -24,3 +24,17 @@ All we need to do is to use the .focus() keyword
     subtraction was c=0,r=4 -> c=0,r=3
     Multiplication was c=1,r=3 -> c=1,r=4
     division was c=1,r=4 -> c=1,r=3
+
+TRY AND EXCEPT
+The try  block let you test a block of code for errors
+The except block lets you handle the errors
+The finally block lets you execute code, regardless of the result of the try and 
+except clocks
+
+Exception Handling
+When errors occurs, or exception as we call it, Python will normally stop and generate 
+an error message. These execptions can be handled using the try statement
+
+MessageBox Widget
+It is used to display the message boxes in the python applications.
+messagebox.Fuction_Name(title, message[, options])

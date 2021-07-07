@@ -32,7 +32,7 @@ def add():
             ans = int(num1) + int(num2)
             txt3.insert(0, ans)
         else:
-            messagebox.showerror("Invalid Input", "Please type in a number")
+            messagebox.showerror("Invalid Input", "Please fill in all the widgets")
     except ValueError:
         messagebox.showerror("Invalid Input", "Input can only be a number")
 

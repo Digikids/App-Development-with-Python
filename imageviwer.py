@@ -4,16 +4,16 @@ from PIL import ImageTk, Image
 root = Tk()
 root.title("Image Viewer")
 
-my_img1 = ImageTk.PhotoImage(Image.open("C:/Users/Steve/Documents/code/Digikids/GUI/First Program/img1.png"))
-my_img2 = ImageTk.PhotoImage(Image.open("C:/Users/Steve/Documents/code/Digikids/GUI/First Program/img2.jpg"))
-my_img3 = ImageTk.PhotoImage(Image.open("C:/Users/Steve/Documents/code/Digikids/GUI/First Program/img3.jpg"))
-my_img4 = ImageTk.PhotoImage(Image.open("C:/Users/Steve/Documents/code/Digikids/GUI/First Program/img4.jpg"))
-my_img5 = ImageTk.PhotoImage(Image.open("C:/Users/Steve/Documents/code/Digikids/GUI/First Program/img5.jpg"))
-my_img6 = ImageTk.PhotoImage(Image.open("C:/Users/Steve/Documents/code/Digikids/GUI/First Program/img6.jpg"))
-my_img7 = ImageTk.PhotoImage(Image.open("C:/Users/Steve/Documents/code/Digikids/GUI/First Program/img7.jpg"))
-my_img8 = ImageTk.PhotoImage(Image.open("C:/Users/Steve/Documents/code/Digikids/GUI/First Program/img8.jpg"))
-my_img9 = ImageTk.PhotoImage(Image.open("C:/Users/Steve/Documents/code/Digikids/GUI/First Program/img9.jpg"))
-my_img10 = ImageTk.PhotoImage(Image.open("C:/Users/Steve/Documents/code/Digikids/GUI/First Program/img10.jpg"))
+my_img1 = ImageTk.PhotoImage(Image.open("C:/Steve/code/Digikids/App-Development-with-Python/images/img1.png"))
+my_img2 = ImageTk.PhotoImage(Image.open("C:/Steve/code/Digikids/App-Development-with-Python/images/img2.jpg"))
+my_img3 = ImageTk.PhotoImage(Image.open("C:/Steve/code/Digikids/App-Development-with-Python/images/img3.jpg"))
+my_img4 = ImageTk.PhotoImage(Image.open("C:/Steve/code/Digikids/App-Development-with-Python/images/img4.jpg"))
+my_img5 = ImageTk.PhotoImage(Image.open("C:/Steve/code/Digikids/App-Development-with-Python/images/img5.jpg"))
+my_img6 = ImageTk.PhotoImage(Image.open("C:/Steve/code/Digikids/App-Development-with-Python/images/img6.jpg"))
+my_img7 = ImageTk.PhotoImage(Image.open("C:/Steve/code/Digikids/App-Development-with-Python/images/img7.jpg"))
+my_img8 = ImageTk.PhotoImage(Image.open("C:/Steve/code/Digikids/App-Development-with-Python/images/img8.jpg"))
+my_img9 = ImageTk.PhotoImage(Image.open("C:/Steve/code/Digikids/App-Development-with-Python/images/img9.jpg"))
+my_img10 = ImageTk.PhotoImage(Image.open("C:/Steve/code/Digikids/App-Development-with-Python/images/img10.jpg"))
 
 image_list = [my_img1,my_img2,my_img3,my_img4,my_img5,my_img6,my_img7,my_img8,my_img9,my_img10]
 
@@ -49,11 +49,11 @@ def back(image_number):
 
     my_label.grid_forget()
     my_label = Label(image=image_list[image_number-1])
-    button_forward = Button(root,text="Next", comman=lambda: forward(image_number+1))
-    button_back = Button(root, text="Previous", command=lambda: back(image_number-1))
+    button_forward = Button(root,text="Next", command=forward(image_number+1))
+    button_back = Button(root, text="Previous", command=back(image_number-1))
 
     if image_number == 1:
-        button_back = Button(root, text="Prevoius", state=DISABLED)
+        button_back = Button(root, text="Previous", state=DISABLED)
 
     my_label.grid(row=2, column=0, columnspan=3)
     button_back.grid(row=1,column=0)

@@ -18,14 +18,14 @@ def button_add():
     first_number = e.get()
     global f_num 
     global math
-    math = "addation"
+    math = "addition"
     f_num = int(first_number)
     e.delete(0, END)
 
 def button_equal():
     second_number = e.get()
     e.delete(0, END)
-    if math == "addation":
+    if math == "addition":
         e.insert(0, f_num + int(second_number))
     if math == "subtraction":
         e.insert(0, f_num - int(second_number))
@@ -34,7 +34,7 @@ def button_equal():
     if math == "division":
         e.insert(0, f_num / int(second_number))
 
-def button_subract():
+def button_subtract():
     first_number = e.get()
     global f_num 
     global math
@@ -73,7 +73,7 @@ button_add = Button(root, text="+", padx=40, pady=20, command=button_add)
 button_equal = Button(root, text="=", padx=80 , pady=20, command=button_equal)
 button_clear = Button(root, text="Clear", padx=80, pady=20, command=button_clear)
 
-button_subtract = Button(root, text="-", padx=40, pady=20, command=button_subract)
+button_subtract = Button(root, text="-", padx=40, pady=20, command=button_subtract)
 button_multiply = Button(root, text="*", padx=40, pady=20, command=button_multiply)
 button_divide = Button(root, text="/", padx=40, pady=20, command=button_divide)
 #Put the buttons on the screen
