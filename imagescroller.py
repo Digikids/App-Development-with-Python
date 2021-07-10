@@ -5,6 +5,15 @@ root = Tk() # Defining the surface
 root.title("Image Viewer")
 
 my_img1 = ImageTk.PhotoImage(Image.open("images/img7.jpg"))
+my_img2 = ImageTk.PhotoImage(Image.open("images/img7.jpg"))
+my_img3 = ImageTk.PhotoImage(Image.open("images/img7.jpg"))
+my_img4 = ImageTk.PhotoImage(Image.open("images/img7.jpg"))
+my_img5 = ImageTk.PhotoImage(Image.open("images/img7.jpg"))
+my_img6 = ImageTk.PhotoImage(Image.open("images/img7.jpg"))
+my_img7 = ImageTk.PhotoImage(Image.open("images/img7.jpg"))
+my_img8 = ImageTk.PhotoImage(Image.open("images/img7.jpg"))
+my_img9 = ImageTk.PhotoImage(Image.open("images/img7.jpg"))
+ 
 
 
 image_list = [my_img1]
