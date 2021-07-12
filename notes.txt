@@ -106,3 +106,33 @@ Test 5
 3. Given two strings, s1 and s2, create a new string by appending s2 in the middle of s1
 4. Create a python function that generates a Python list of all the even numbers between 4 to 30
 5. Create a function that returns the largest item from the given list
+
+COMBO WIDGET
+To add a combo widget, you cn use the combo class ttk library
+
+from tkinter.ttk import *
+
+combo = Combobox(window)
+combo.get()
+
+CHECKBUTTON WIDGET
+chk = Checkbutton(window, text='Choose')
+
+RADIO BUTTON
+rad1 = Radiobutton(window,text='First', value=1)
+
+SCROLLED TEXT WIDGET
+from tkinter import scrolledtext
+
+txt = scrolledtext.ScrolledText(window,width=40,height=10)
+
+MessageBox
+from tkinter import messagebox
+
+messagebox.showinfo('Message title','Message content')
+
+SPINBOX
+spin = Spinbox(window, from_=0, to=100)
+
+MENUBAR
+menu.add_cascade(label='File', menu=new_item)
