@@ -1,6 +1,7 @@
 from tkinter import *
 import math
 import random
+from tkinter import messagebox
 
 COLORS = ['snow', 'ghost white', 'white smoke', 'gainsboro', 'floral white', 'old lace',
     'linen', 'antique white', 'papaya whip', 'blanched almond', 'bisque', 'peach puff',
@@ -78,6 +79,7 @@ COLORS = ['snow', 'ghost white', 'white smoke', 'gainsboro', 'floral white', 'ol
     'gray84', 'gray85', 'gray86', 'gray87', 'gray88', 'gray89', 'gray90', 'gray91', 'gray92',
     'gray93', 'gray94', 'gray95', 'gray97', 'gray98', 'gray99']
 
+
 # Functions
 def choose_color():
     color = random.choice(COLORS)
@@ -94,6 +96,24 @@ calc.resizable(0, 0)
 # Entry Widget
 en = Entry(calc, width=35, borderwidth=5, bg="white", fg="black")
 en.grid(column=0, row=0, columnspan=4, padx=10, pady=10)
+
+def b_exit():
+    iExit = messagebox.askyesno("Exit", "Are you sure you want to exit?")
+    if iExit > 0:
+        calc.destroy()
+        return
+
+def b_square():
+    first_number = en.get()
+    i = int(first_number)
+    en.delete(0, END)
+    en.insert(0, i*i)
+
+def b_squareroot():
+    first_number = en.get()
+    i = int(first_number)
+    en.delete(0, END)
+    en.insert(0, math.sqrt(i))
 
 def button_click(number):
     current = en.get()
@@ -185,14 +205,13 @@ b_equals.grid(column=2, row=4)
 b_div = Button(calc, text="/", padx=40, pady=20, bg=choose_color(), fg="Black", width=2, height=2, command=b_divide)
 b_div.grid(column=3, row=4)
 
-b_square = Button(calc, text="x²", padx=40, pady=20, bg=choose_color(), fg="Black", width=2, height=2)
+b_square = Button(calc, text="x²", padx=40, pady=20, bg=choose_color(), fg="Black", width=2, height=2, command=b_square)
 b_square.grid(column=0, row=5)
-b_squareroot = Button(calc, text="√", padx=40, pady=20, bg=choose_color(), fg="Black", width=2, height=2)
+b_squareroot = Button(calc, text="√", padx=40, pady=20, bg=choose_color(), fg="Black", width=2, height=2, command = b_squareroot)
 b_squareroot.grid(column=1, row=5)
 b_delete = Button(calc, text="DEL", padx=40, pady=20, bg=choose_color(), fg="Black", width=2, height=2, command=b_delete)
 b_delete.grid(column=2, row=5)
-b_exit = Button(calc, text="EXIT", padx=40, pady=20, bg=choose_color(), fg="Black", width=2, height=2)
+b_exit = Button(calc, text="EXIT", padx=40, pady=20, bg=choose_color(), fg="Black", width=2, height=2, command=b_exit)
 b_exit.grid(column=3, row=5)
 
 calc.mainloop()
-
