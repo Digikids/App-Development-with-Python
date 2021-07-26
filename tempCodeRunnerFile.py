@@ -1,7 +1,2 @@
-list = [1,2,2,2,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8, 25, 50, 157, 90, 45]
-
-for i in list:
-    while i < 150:
-        if i % 5 == 0:
-            print(i)
-    
+    b_password = Button(window, text="pass", padx=40, pady=20, bg="violet", fg="Black", width=2, height=2)
+    b_password.grid(column=1, row=2)
